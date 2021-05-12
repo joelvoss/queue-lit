@@ -14,7 +14,12 @@
   },
   "source": "src/index.js",
   "main": "dist/queue-lit.js",
-  "module": "dist/queue-lit.module.js",
+  "module": "dist/queue-lit.m.js",
+  "exports": {
+    "require": "./dist/queue-lit.js",
+    "default": "./dist/queue-lit.modern.js"
+  },
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE"
