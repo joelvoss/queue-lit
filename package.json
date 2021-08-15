@@ -12,14 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/joelvoss/queue-lit.git"
   },
+  "type": "module",
   "source": "src/index.js",
-  "main": "dist/queue-lit.js",
-  "module": "dist/queue-lit.m.js",
+  "main": "dist/queue-lit.cjs",
+  "module": "dist/queue-lit.module.js",
   "exports": {
-    "require": "./dist/queue-lit.js",
+    "require": "./dist/queue-lit.cjs",
     "import": "./dist/queue-lit.modern.js"
   },
-  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE"
