@@ -7,53 +7,81 @@ class Node {
 	}
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Queue
+ * @implements Iterable<Value>
+ * @template Value
+ */
 export class Queue {
-	_head;
-	_tail;
-	_size;
+	#head;
+	#tail;
+	#size;
 
 	constructor() {
 		this.clear();
 	}
 
+	/**
+	 * clear
+	 * @returns {void}
+	 */
 	clear() {
-		this._head = undefined;
-		this._tail = undefined;
-		this._size = 0;
+		this.#head = undefined;
+		this.#tail = undefined;
+		this.#size = 0;
 	}
 
+	/**
+	 * push
+	 * @param {Value} value
+	 * @returns {number}
+	 */
 	push(value) {
 		const node = new Node(value);
 
-		if (this._head) {
-			this._tail.next = node;
-			this._tail = node;
+		if (this.#head) {
+			this.#tail.next = node;
+			this.#tail = node;
 		} else {
-			this._head = node;
-			this._tail = node;
+			this.#head = node;
+			this.#tail = node;
 		}
 
-		this._size++;
-		return this._size;
+		this.#size++;
+		return this.#size;
 	}
 
+	/**
+	 * pop
+	 * @returns {Value | undefined}
+	 */
 	pop() {
-		const current = this._head;
+		const current = this.#head;
 		if (!current) {
 			return;
 		}
 
-		this._head = this._head.next;
-		this._size--;
+		this.#head = this.#head.next;
+		this.#size--;
 		return current.value;
 	}
 
+	/**
+	 * size
+	 * @returns {number}
+	 */
 	get size() {
-		return this._size;
+		return this.#size;
 	}
 
+	/**
+	 * Iterator
+	 * @returns {IterableIterator<Value>}
+	 */
 	*[Symbol.iterator]() {
-		let current = this._head;
+		let current = this.#head;
 
 		while (current) {
 			yield current.value;
