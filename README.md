@@ -5,10 +5,6 @@ This package is a tiny queue data structure in case you `Array#push()` or
 `Array#shift()` has linear time complexity `O(n)` while `Queue#push()` has
 constant time complexity `O(1)`.
 
-## Requirements
-
-  - Node v12+
-
 ## Installation
 
 ```bash
