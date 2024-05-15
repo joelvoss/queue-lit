@@ -73,8 +73,6 @@ Static method that returns the size of the queue.
 
 ```bash
 $ npm i
-# or
-$ yarn
 ```
 
 (2) Run initial validation
@@ -87,7 +85,5 @@ $ ./Taskfile.sh validate
     help you develop.
 
 ---
-
-_This project was set up by @jvdx/core_
 
 [`Iterable`]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
