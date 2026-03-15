@@ -13,7 +13,7 @@ class Node {
  * A simple queue implementation that follows the FIFO (First In, First Out)
  * principle.
  */
-export class Queue {
+export default class Queue {
 	private head: Node | undefined;
 	private tail: Node | undefined;
 	private _size = 0;
