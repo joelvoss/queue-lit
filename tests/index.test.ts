@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'vitest';
+
 import { Queue } from '../src/index';
 
 describe(`queue`, () => {
