@@ -1,8 +1,12 @@
 import { describe, expect, test } from 'vitest';
 
-import { Queue } from '../src/index';
+import Queue, { Queue as NamedQueue } from '../src/index';
 
 describe(`queue`, () => {
+	test('should expose Queue as a default and named export', () => {
+		expect(Queue).toBe(NamedQueue);
+	});
+
 	test('should add new elements', () => {
 		const queue = new Queue();
 		queue.push('🙃');
