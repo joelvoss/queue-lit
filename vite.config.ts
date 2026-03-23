@@ -19,5 +19,10 @@ export default defineConfig({
 			formats: ['cjs', 'es'],
 			fileName: parse(packageJson.module).name,
 		},
+		rollupOptions: {
+			output: {
+				exports: 'named',
+			},
+		},
 	},
 });
